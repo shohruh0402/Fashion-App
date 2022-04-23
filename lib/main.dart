@@ -1,5 +1,4 @@
 import 'package:fashionapp/routers/my_routers.dart';
-import 'package:fashionapp/screens/pages/home_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -16,6 +15,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
+        fontFamily: 'Tenor',
         primarySwatch: Colors.blue,
       ),
       initialRoute: '/',
