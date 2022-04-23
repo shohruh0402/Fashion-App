@@ -2,14 +2,15 @@ import 'package:fashionapp/screens/sizeconfig.dart';
 import 'package:flutter/material.dart';
 
 class MyAppBarWidgets extends StatelessWidget {
-  const MyAppBarWidgets({Key? key}) : super(key: key);
+  Color? color = Color(0xFFE7EAEF);
+  MyAppBarWidgets({Key? key, this.color}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
       height: he(100),
       width: double.infinity,
-      color: Color(0xFFE7EAEF),
+      color: color,
       child: Padding(
         padding: EdgeInsets.only(top: he(30), left: wi(16), right: wi(16)),
         child: Row(

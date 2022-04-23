@@ -1,3 +1,4 @@
+import 'package:fashionapp/screens/pages/explore_page.dart';
 import 'package:fashionapp/screens/pages/home_page.dart';
 import 'package:flutter/material.dart';
 
@@ -9,6 +10,10 @@ class MyRouter {
       case '/':
         return MaterialPageRoute(
           builder: (_) => MyHomePage(),
+        );
+      case '/explore':
+        return MaterialPageRoute(
+          builder: (_) => ExplorePage(),
         );
     }
   }

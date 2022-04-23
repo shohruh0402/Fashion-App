@@ -1,8 +1,6 @@
 import 'package:fashionapp/screens/sizeconfig.dart';
 import 'package:fashionapp/widgets/app_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:svg_icon/svg_icon.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key}) : super(key: key);
@@ -21,7 +19,7 @@ class _MyHomePageState extends State<MyHomePage> {
         physics: const BouncingScrollPhysics(),
         child: Column(
           children: [
-            const MyAppBarWidgets(),
+             MyAppBarWidgets(),
             SizedBox(
                 height: he(650),
                 width: double.infinity,
@@ -55,32 +53,62 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             SizedBox(
-              height: he(520),
+              height: he(530),
               width: wi(343),
               child: GridView.builder(
                   physics: const NeverScrollableScrollPhysics(),
                   padding: const EdgeInsets.only(top: 0),
                   itemCount: 4,
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                    mainAxisExtent: 260,
+                    mainAxisExtent: 280,
                     crossAxisCount: 2,
                   ),
                   itemBuilder: (context, index) {
                     return Container(
                       width: wi(165),
-                      color: Colors.red,
                       margin: const EdgeInsets.all(10),
                       child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
                         children: [
-                          Container(
+                          SizedBox(
                             height: he(200),
                             width: double.infinity,
-                            child: Image.asset(data_for[index].image),
+                            child: Image.asset(
+                              data_for[index].image,
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                          SizedBox(height: index == 3 ? he(5) : 0),
+                          Text(
+                            data_for[index].name,
+                            textAlign: TextAlign.center,
+                            style: TextStyle(fontSize: wi(12)),
+                          ),
+                          Text(
+                            data_for[index].price,
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                                fontSize: wi(15), color: Color(0xFFDD8560)),
                           )
                         ],
                       ),
                     );
                   }),
+            ),
+            SizedBox(height: he(40)),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  'Explore More',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: wi(16),
+                  ),
+                ),
+                SizedBox(width: wi(8)),
+                const Icon(Icons.arrow_forward)
+              ],
             ),
             const SizedBox(height: 322),
           ],
@@ -100,6 +128,7 @@ class OnBoards {
   });
 }
 
+// ignore: non_constant_identifier_names
 final List<OnBoards> data_for = [
   OnBoards(
     image: 'assets/images/Rectangle 325.png',
@@ -118,7 +147,7 @@ final List<OnBoards> data_for = [
   ),
   OnBoards(
     image: 'assets/images/Rectangle 325(3).png',
-    name: '21WN reversible angora\ncardigan',
+    name: 'Oblong bag',
     price: '\$120',
   ),
 ];

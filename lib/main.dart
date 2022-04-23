@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Tenor',
         primarySwatch: Colors.blue,
       ),
-      initialRoute: '/',
+      initialRoute: '/explore',
       onGenerateRoute: _forroute.onGenerateRoute,
     );
   }
