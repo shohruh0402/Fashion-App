@@ -21,8 +21,8 @@ class _ExplorePageState extends State<ExplorePage> {
           ),
           Expanded(
             child: GridView.builder(
-              physics: BouncingScrollPhysics(),
-              padding: EdgeInsets.only(top: 0),
+              physics: const BouncingScrollPhysics(),
+              padding: const EdgeInsets.only(top: 0),
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                 mainAxisExtent: he(300),
                 crossAxisCount: 2,
