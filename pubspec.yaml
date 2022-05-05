@@ -36,6 +36,10 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter_svg: ^0.22.0
   svg_icon: ^0.0.1
+  dio: ^4.0.6
+  http: ^0.13.4
+  bloc: ^8.0.3
+  flutter_bloc: ^8.0.1
 
 dev_dependencies:
   flutter_test:
